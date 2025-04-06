@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio KenzDev | Web Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .glow-text {
+      text-shadow: 0 0 10px rgba(0, 255, 224, 0.7);
+    }
+    .glow-box {
+      box-shadow: 0 0 15px rgba(0, 255, 224, 0.5);
+    }
+    .glow-box-hover:hover {
+      box-shadow: 0 0 20px rgba(0, 255, 224, 0.7);
+    }
+    .neon-border {
+      border: 2px solid #00ffe0;
+      box-shadow: 0 0 10px rgba(0, 255, 224, 0.5);
+    }
+    .transition-smooth {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-poppins min-h-screen">
+  <!-- Header Section -->
+  <header class="container mx-auto px-4 py-8 border-b border-gray-800">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-bold glow-text mb-2">Portofolio KenzDev</h1>
+      <p class="text-cyan-400 text-lg">Portofolio System UI</p>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="relative inline-block">
+        <img src="https://kenz.cloudx.biz.id/download/1743865017185.jpg" 
+             class="w-32 h-32 rounded-full mx-auto border-4 neon-border transition-smooth hover:scale-105" 
+             alt="KenzDev Profile" />
+        <span class="absolute bottom-0 right-0 bg-cyan-500 text-gray-900 rounded-full w-8 h-8 flex items-center justify-center">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
+      <h2 class="text-3xl font-semibold mt-6 mb-2">KenzDev</h2>
+      <p class="text-gray-400 text-lg mb-4">Fullstack Developer & UI/UX Enthusiast</p>
+      <p class="text-gray-300">
+        Developer web, bot & fullstack creator yang suka ngoding gaya bebas. 
+        Fokus di UI/UX dan otomasi dengan pendekatan modern dan kreatif.
+      </p>
+      
+      <div class="flex justify-center space-x-4 mt-6">
+        <a href="https://github.com/alzzhosting" class="text-cyan-400 hover:text-cyan-300 transition-smooth">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        
+        <a href="https://youtube.com/@KenzzDev" class="text-cyan-400 hover:text-cyan-300 transition-smooth">
+          <i class="fab fa-youtube fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h3 class="text-3xl md:text-4xl font-bold glow-text mb-4">Project Saya</h3>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Beberapa project terbaik yang telah saya kerjakan dengan berbagai teknologi modern.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div onclick="openProject1('Project 1')" 
+           class="bg-gray-800 rounded-xl p-6 cursor-pointer transition-smooth hover:glow-box-hover hover:-translate-y-1 border border-gray-700">
+        <div class="bg-cyan-900 bg-opacity-20 p-4 rounded-lg mb-4">
+          <i class="fas fa-globe text-cyan-400 text-3xl"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-2">Script Web Store</h4>
+        <p class="text-gray-400 mb-4">Deskripsi singkat tentang Script Web Store dengan teknologi yang digunakan.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-700 rounded-full text-sm text-cyan-300">HTML</span>
+          <span class="px-3 py-1 bg-gray-700 rounded-full text-sm text-cyan-300">CSS</span>
+          <span class="px-3 py-1 bg-gray-700 rounded-full text-sm text-cyan-300">JavaScript</span>
+        </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div onclick="openProject2('Project 2')" 
+           class="bg-gray-800 rounded-xl p-6 cursor-pointer transition-smooth hover:glow-box-hover hover:-translate-y-1 border border-gray-700">
+        <div class="bg-cyan-900 bg-opacity-20 p-4 rounded-lg mb-4">
+          <i class="fas fa-globe text-cyan-400 text-3xl"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-2">Script Web TopUp</h4>
+        <p class="text-gray-400 mb-4">Deskripsi singkat tentang Web TopUp dengan fitur unggulan yaitu Otomatis.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-700 rounded-full text-sm text-cyan-300">Express</span>
+          <span class="px-3 py-1 bg-gray-700 rounded-full text-sm text-cyan-300">MongoDB</span>
+        </div>
+      </div>
+      
+      <!-- Project 3 -->
+      <div onclick="openProject3('Project 3')" 
+           class="bg-gray-800 rounded-xl p-6 cursor-pointer transition-smooth hover:glow-box-hover hover:-translate-y-1 border border-gray-700">
+        <div class="bg-cyan-900 bg-opacity-20 p-4 rounded-lg mb-4">
+          <i class="fas fa-robot text-cyan-400 text-3xl"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-2">Script Bot Wa</h4>
+        <p class="text-gray-400 mb-4">Deskripsi singkat tentang Bot Wa dengan NodeJs</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-700 rounded-full text-sm text-cyan-300">NodeJs</span>
+          
+        </div>
+      </div>
+            <!-- Project 4 -->
+      <div onclick="openProject4('botwa')" 
+           class="bg-gray-800 rounded-xl p-6 cursor-pointer transition-smooth hover:glow-box-hover hover:-translate-y-1 border border-gray-700">
+        <div class="bg-cyan-900 bg-opacity-20 p-4 rounded-lg mb-4">
+          <i class="fas fa-robot text-cyan-400 text-3xl"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-2">Script Bot Wa Vhizer</h4>
+        <p class="text-gray-400 mb-4">Deskripsi singkat tentang Bot Wa dengan NodeJs</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-700 rounded-full text-sm text-cyan-300">NodeJs</span>
+          
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container mx-auto px-4 py-8 border-t border-gray-800 mt-12">
+    <div class="text-center text-gray-500 text-sm">
+      <p>© 2025 KenzDev. All rights reserved.</p>
+      <p class="mt-2">Dibuat dengan <i class="fas fa-heart text-cyan-400"></i> dan <i class="fas fa-coffee text-amber-400"></i></p>
+    </div>
+  </footer>
+
+  <script src="/asset/script/scripts/script2.js"></script>
+</body>
+</html>
